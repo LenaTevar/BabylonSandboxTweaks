@@ -246,7 +246,7 @@ if (BABYLON.Engine.isSupported()) {
     };
 
     var sceneError = function(sceneFile, babylonScene, message) {
-        document.title = "Babylon.js - " + sceneFile.name;
+        document.title = "3D sandbox Viewer - File: " + sceneFile.name;
         document.getElementById("logo").className = "";
         canvas.style.opacity = 0;
 
