@@ -1,0 +1,7 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.63 40.18">
+ <style>
+    .bold { font: bold 25px;  fill: #fff; font-family: 'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', -apple-system, sans-serif !important;}
+  </style>
+
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="bold" >BRANDING!</text> 
+</svg>
