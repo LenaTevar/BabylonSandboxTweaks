@@ -7,7 +7,7 @@ var currentGroup; // animation group
 var currentGroupIndex;
 var currentScene;
 //Loading model wait animation background color 
-var backgroundColorLoadingModelAnimation = "#fff";
+var backgroundColorLoadingModelAnimation = "#579aca";
 // html tags
 var footer = document.getElementById("footer");
 var canvas = document.getElementById("renderCanvas");
@@ -144,7 +144,7 @@ if (BABYLON.Engine.isSupported()) {
             anyLoaded(scene, false);
         });
 
-        document.title = "Babylon.js - " + sceneFile.name;
+        document.title = "3D Sandbox Viewer - File: " + sceneFile.name;
 
         btnInspector.classList.remove("hidden");
         btnEnvironment.classList.remove("hidden");
@@ -240,13 +240,13 @@ if (BABYLON.Engine.isSupported()) {
             }
         }
 
-        if (debugLayerEnabled) {
+        if (debugLayerEnabled ) {
             currentScene.debugLayer.show();
         }
     };
 
     var sceneError = function(sceneFile, babylonScene, message) {
-        document.title = "3D sandbox Viewer - File: " + sceneFile.name;
+        document.title = "3D Sandbox Viewer - File: " + sceneFile.name;
         document.getElementById("logo").className = "";
         canvas.style.opacity = 0;
 
@@ -331,7 +331,7 @@ if (BABYLON.Engine.isSupported()) {
 
     btnInspector.addEventListener('click', function() {
         if (currentScene) {
-            if (currentScene.debugLayer.isVisible()) {
+            if (currentScene != undefined && currentScene.debugLayer.isVisible()) {
                 debugLayerEnabled = false;
                 currentScene.debugLayer.hide();
             }
@@ -346,19 +346,23 @@ if (BABYLON.Engine.isSupported()) {
         // Press space to toggle footer
         if (event.keyCode === 32 && event.target.nodeName !== "INPUT") {
             if (footer.style.display === "none") {
-                footer.style.display = "block";
-                canvasZone.style.height = "calc(100% - 56px)";
+             
+                //footer.style.display = "grid";
+                //canvasZone.style.height = "calc(100% - var(--footer-height))";
+                footer.removeAttribute('style')
+                canvasZone.removeAttribute('style')
                 if (debugLayerEnabled) {
                     currentScene.debugLayer.show();
                 }
                 engine.resize();
             }
             else {
+
                 footer.style.display = "none";
                 canvasZone.style.height = "100%";
                 errorZone.style.display = "none";
                 engine.resize();
-                if (currentScene.debugLayer.isVisible()) {
+                if (currentScene != undefined && currentScene.debugLayer.isVisible()) {
                     currentScene.debugLayer.hide();
                 }
             }

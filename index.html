@@ -40,6 +40,7 @@
         <div id="footer" class="footer">
             <div class="footerLeft">
                 <img id="logoImg" src="Assets/BabylonIdentity.svg">
+                
             </div>
             <div id="animationBar">
                 <div class="row">
@@ -49,6 +50,7 @@
                     </button>
                     <input id="slider" type="range" min="0" max="100" value="0" step="any">
                 </div>
+                
                 <div class="dropdown">
                     <div id="dropdownBtn">
                         <img src="Assets/Icon_Up.svg" id="chevronUp">
@@ -59,30 +61,43 @@
                     </div>
                 </div>
             </div>
+            <!-- Footer right side menu -->
             <div class="footerRight">
+                
                 <a href="javascript:void(null);">
-                    <div class="custom-upload"
-                        title="Open your scene from your hard drive (.babylon, .gltf, .glb, .obj)">
+                    <div class="custom-upload" title="Open your scene from your hard drive (.babylon, .gltf, .glb, .obj)">
                         <input type="file" id="files" multiple />
                     </div>
                 </a>
-                <a href="javascript:void(null);" id="btnEnvironment" class="hidden"><img src="./Assets/IBLicon.svg"
-                        alt="Select environment" title="Select environment" />
+                <!-- The drop up menu is tied to the second button position, not to the button itself. 
+                Please don't remove the Select environment from the second position or fix drop up menu. -->
+                <a href="javascript:void(null);" id="btnEnvironment" class="hidden" >
+                    <img src="./Assets/Icon_ChangeView.svg" alt="Select environment" title="Select environment"/>
                 </a>
-                <a href="javascript:void(null);" id="btnReload" class="hidden"><img src="./Assets/IBRicon.svg"
-                    alt="Reload" title="Reload environment" />
+                
+                <a href="javascript:void(null);" id="btnReload" class="hidden">
+                    <img src="./Assets/Icon_Reload.svg" alt="Reload" title="Reload environment" />
                 </a>
-                <a href="javascript:void(null);" id="btnInspector" class="hidden"><img src="./Assets/Icon_EditModel.svg"
-                        alt="Display inspector" title="Display inspector" /></a>
+              
+                <a href="javascript:void(null);" id="btnInspector" class="hidden">
+                    <img src="./Assets/Icon_EditModel.svg" alt="Display inspector" title="Display inspector" /></a>
                 <div id="dropdownContent-env" class="hidden">
                 </div>
+              
+                <a href="javascript:void(null);" id="btnHelp" >
+                    <img src="./Assets/Icon_Help.svg" alt="Help" title="Help"/>
+                </a>
             </div>
         </div>
+
         <div id="logoContainer">
             <img id="logo" src='./Assets/Logo_Fullscreen.svg' />
         </div>
+
         <div id="errorZone"></div>
     </div>
+
+
     <script src="environment.js"></script>
     <script src="animation.js"></script>
     <script src="index.js"></script>

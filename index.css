@@ -3,8 +3,10 @@
     --footer-background: #201936;#2A2342
     --button-hover-color: #BB464B;
     --button-hover-hover: #e0684b;
-    --button-hover-background:  #162D3A;*/
-    --background: #fff;
+    --button-hover-background:  #162D3A;
+    OBS! Loading animation in index.js uses same --background color.
+    */
+    --background: #579aca;
     --footer-background:  #484848;
     --footer-height: 70px;
     --button-hover-color: #0051BA;
@@ -175,6 +177,8 @@ a:visited {
     width: 100%;
     bottom: 50px;    
 }
+
+
 #btnDownArrow {
     position: absolute;
     bottom: 35px;
